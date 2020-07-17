@@ -1,4 +1,26 @@
 <div class = "container bottom_container">
+  <br>
+  {{ if (isset .Site.Params "substack_subscribe" ) }} <!-- substack begin -->
+  <div class="row justify-content-center">
+    <div class="col-md-6 sidebar_general">
+      <div class = "row">
+        <div class = "col">
+          <h3 class="sidebar_headline text-uppercase">Join the Mailing List</h3>
+        </div>
+      </div>
+      <div class="media">
+        <iframe src="https://{{ .Site.Params.substack_subscribe }}.substack.com/embed"
+          width="480"
+          height="320"
+          style="border:1px solid #eeeeee; background: white;"
+          frameborder="0"
+          scrolling="no">
+          </iframe>
+      </div>
+    </div>
+  </div>
+  {{ end }}<!-- mailchimp end -->
+
   <div class="row">
   <div class="col-md-12">
     <nav class = "navbar navbar-default navbar_footer">
